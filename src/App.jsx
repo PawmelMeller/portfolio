@@ -42,7 +42,7 @@ function App() {
     
     containerRef={containerRef}
     >
-      <div ref={containerRef} className='main text-white overflow-hidden'>
+      <div ref={containerRef} data-scroll-container className='main text-white overflow-hidden'>
         <Cursor/>
         <Loader />
         <div className=' bg-[#151515]'>
