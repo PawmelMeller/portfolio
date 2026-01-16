@@ -16,8 +16,8 @@ const ServicesWeb = () => {
                             "serviceType": "Tworzenie Stron Internetowych",
                             "provider": {
                                 "@type": "Organization",
-                                "name": "Meller Web",
-                                "url": "https://mellerweb.pl"
+                                "name": "Craze Studio",
+                                "url": "https://craze-studio.pl"
                             },
                             "areaServed": {
                                 "@type": "City",

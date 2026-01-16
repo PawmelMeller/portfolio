@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mellerweb.pl/sitemap.xml
+Sitemap: https://craze-studio.pl/sitemap.xml

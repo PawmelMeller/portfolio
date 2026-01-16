@@ -17,8 +17,8 @@ const FAQ = () => {
     return (
         <div data-scroll-section className="pt-[15vh] px-[4vw] min-h-screen">
             <Helmet>
-                <title>FAQ | Najczęściej zadawane pytania - Meller Web</title>
-                <meta name="description" content="Masz pytania? Sprawdź odpowiedzi na najczęstsze pytania dotyczące tworzenia stron, sklepów i aplikacji. FAQ Meller Web." />
+                <title>FAQ | Najczęściej zadawane pytania - Craze Studio</title>
+                <meta name="description" content="Masz pytania? Sprawdź odpowiedzi na najczęstsze pytania dotyczące tworzenia stron, sklepów i aplikacji. FAQ Craze Studio." />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

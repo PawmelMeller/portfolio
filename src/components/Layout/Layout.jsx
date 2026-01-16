@@ -17,9 +17,9 @@ const Layout = () => {
                         {
                             "@context": "https://schema.org",
                             "@type": "Organization",
-                            "name": "Meller Web",
-                            "url": "https://mellerweb.pl",
-                            "logo": "https://mellerweb.pl/icons/icon-512x512.png",
+                            "name": "Craze Studio",
+                            "url": "https://craze-studio.pl",
+                            "logo": "https://craze-studio.pl/icons/icon-512x512.png",
                             "contactPoint": {
                                 "@type": "ContactPoint",
                                 "telephone": "+48 508 843 219",

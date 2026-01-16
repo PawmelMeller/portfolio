@@ -1,39 +1,54 @@
 import React, { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
-import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
     const form = useRef();
     const [status, setStatus] = useState('');
     const [buttonText, setButtonText] = useState('Wyślij wiadomość');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText('Wysyłanie...');
 
-        // REPLACE THESE SECRETS WITH YOUR EMAILJS CREDENTIALS
-        // https://dashboard.emailjs.com/admin
-        const SERVICE_ID = 'service_p56dkbd';
-        const TEMPLATE_ID = 'template_1ohylaj';
-        const PUBLIC_KEY = 'RqWQ9dRpoRl4jSkKl';
+        try {
+            const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value
+            };
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-            .then((result) => {
+            const response = await fetch('/contact.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.status === 'success') {
                 setStatus('Dziękujemy! Wiadomość została wysłana.');
                 setButtonText('Wyślij wiadomość');
                 form.current.reset();
                 setTimeout(() => setStatus(''), 5000);
-            }, (error) => {
+            } else {
                 setStatus('Wystąpił błąd. Spróbuj ponownie lub napisz na maila.');
                 setButtonText('Wyślij wiadomość');
-                console.error(error.text);
-            });
+                console.error(result);
+            }
+        } catch (error) {
+            setStatus('Wystąpił błąd. Spróbuj ponownie lub napisz na maila.');
+            setButtonText('Wyślij wiadomość');
+            console.error(error);
+        }
     }
 
     return (
         <div data-scroll-section className="pt-[15vh] px-[4vw] min-h-screen">
             <Helmet>
-                <title>Kontakt | Meller Web - Projektowanie Stron</title>
+                <title>Kontakt | Craze Studio - Projektowanie Stron</title>
                 <meta name="description" content="Skontaktuj się z nami! Odpowiadamy w 24h. Darmowa wycena strony internetowej lub sklepu. Twój partner w biznesie online." />
             </Helmet>
 
@@ -42,10 +57,10 @@ const Contact = () => {
                     Kontakt
                 </h1>
                 <div className="text-right hidden sm:block font-[PlinaReg]">
-                    <p>Meller Web</p>
+                    <p>Craze Studio</p>
                     <p>ul. Kaszubska 7</p>
                     <p>81-813 Sopot</p>
-                    <p className="mt-2 text-xl underline"><a href="mailto:pawel.meller3@gmail.com">pawel.meller3@gmail.com</a></p>
+                    <p className="mt-2 text-xl underline"><a href="mailto:kontakt@craze-studio.pl">kontakt@craze-studio.pl</a></p>
                 </div>
             </div>
 

@@ -14,7 +14,7 @@ const Blog = () => {
     return (
         <div data-scroll-section className="pt-[15vh] px-[4vw] min-h-screen">
             <Helmet>
-                <title>Blog | Porady React, Next.js i Marketing - Paweł Meller</title>
+                <title>Blog | Porady React, Next.js i Marketing - Craze Studio</title>
                 <meta name="description" content="Czytaj nasz blog. Ekspercka wiedza o React, Next.js, SEO i tworzeniu stron www. Poradniki i porównania." />
             </Helmet>
 

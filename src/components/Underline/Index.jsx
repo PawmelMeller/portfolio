@@ -9,7 +9,7 @@ UnderLine.propTypes = {
 };
 
 
-function UnderLine({marginTop, marginBottom}) {
+function UnderLine({ marginTop, marginBottom }) {
 
     const path = useRef(null);
     let progress = 0;
@@ -22,20 +22,20 @@ function UnderLine({marginTop, marginBottom}) {
     }, []);
 
     const setPath = (progress) => {
-        const {innerWidth} = window;
+        const { innerWidth } = window;
         const width = innerWidth * 0.7;
         path.current.setAttributeNS("", "d", `M0 50 Q${width * x} ${50 + progress}, ${width} 50`)
     }
 
-    const  manageMouseEnter = () => {
-        if(reqId) {
+    const manageMouseEnter = () => {
+        if (reqId) {
             window.cancelAnimationFrame(reqId);
         }
     }
 
     const manageMouseMove = (e) => {
-        const {movementY, clientX} = e;
-        const {left, width} = path.current.getBoundingClientRect();
+        const { movementY, clientX } = e;
+        const { left, width } = path.current.getBoundingClientRect();
         x = (clientX - left) / width;
         progress += movementY;
         setPath(progress);
@@ -45,7 +45,7 @@ function UnderLine({marginTop, marginBottom}) {
         animateOut();
     }
 
-    const lerp = (x,y,a) => x * (1-a) + y * a;
+    const lerp = (x, y, a) => x * (1 - a) + y * a;
     let time = (Math.PI / 2);
 
     const animateOut = () => {
@@ -54,11 +54,11 @@ function UnderLine({marginTop, marginBottom}) {
         setPath(newProgress);
         progress = lerp(progress, 0, 0.025);
 
-        if(Math.abs(progress) > 0.75) {
-        window.requestAnimationFrame(animateOut);
+        if (Math.abs(progress) > 0.75) {
+            window.requestAnimationFrame(animateOut);
         }
         else {
-        resetAnimation();
+            resetAnimation();
         }
     }
 
@@ -71,26 +71,26 @@ function UnderLine({marginTop, marginBottom}) {
         marginBottom: marginBottom,
     };
 
-  return (
-    <div className='w-full'>
-        <div 
-            style={dynamicStyles}
-            className={`line ${styles.line} relative w-[100%] h-[.25vw] mt-[16vw] mb-[6vw]
+    return (
+        <div className='w-full'>
+            <div
+                style={dynamicStyles}
+                className={`line ${styles.line} relative w-[100%] h-[.25vw] 
             sm:h-[.01vw]`}
-        >
-            <div 
-                className={`box ${styles.box}`} 
-                onMouseEnter={manageMouseEnter}
-                onMouseMove={manageMouseMove}
-                onMouseLeave={manageMouseLeave}
             >
+                <div
+                    className={`box ${styles.box}`}
+                    onMouseEnter={manageMouseEnter}
+                    onMouseMove={manageMouseMove}
+                    onMouseLeave={manageMouseLeave}
+                >
+                </div>
+                <svg className='w-full h-[100px] absolute -top-[50px]'>
+                    <path ref={path} className={`path1 ${styles.path1}`} ></path>
+                </svg>
             </div>
-            <svg className='w-full h-[100px] absolute -top-[50px]'>
-                <path ref={path} className={`path1 ${styles.path1}`} ></path>
-            </svg>
         </div>
-    </div>
-  )
+    )
 }
 
 export default UnderLine

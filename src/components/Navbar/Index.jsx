@@ -67,18 +67,18 @@ function Navbar() {
               </svg>
             </div>
             <Link to="/" className="logo hidden sm:inline-block font-[PlinaReg] text-[1.5vw] uppercase tracking-tighter">
-              Meller Web
+              Craze Studio
             </Link>
           </div>
 
           <div className="first2 hidden sm:inline-block text-[.9vw] leading-none">
-            <h5>Meller Web</h5>
+            <h5>Craze Studio</h5>
             <h5>Creative</h5>
             <h5>Development</h5>
           </div>
         </div>
 
-        <div className='last hidden sm:flex items-start w-[14vw] justify-around relative 
+        <div className='last hidden sm:flex items-start gap-8 relative 
           text-[.9vw]'
         >
           {data.map((item, index) => {
@@ -111,7 +111,7 @@ function Navbar() {
           sm:hidden
           font-[PlinaReg] text-[5vw] uppercase tracking-tighter
         ">
-          Meller Web
+          Craze Studio
         </Link>
       </div>
 

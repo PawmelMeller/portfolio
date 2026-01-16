@@ -59,13 +59,6 @@ function Loader() {
             y: 180,
             stagger: 0.2,
         })
-        tl.from('.page2', {
-            y: 800,
-            opacity: 0,
-            duration: 0.4,
-            delay: 0.1,
-            ease: Power4
-        })
     })
 
     return (
@@ -96,7 +89,7 @@ function Loader() {
                 </div>
                 <div
                     className={`line ${styles.line} uppercase`}>
-                    <div className="text-[7.4vw] sm:text-[7vw] xl:text-[5.8vw] font-bold">Meller Web</div>
+                    <div className="text-[7.4vw] sm:text-[7vw] xl:text-[5.8vw] font-bold">Craze Studio</div>
                 </div>
                 <div
                     className={` line ${styles.line} flex 
