@@ -20,71 +20,71 @@ function Project() {
         parent: wrappers.current,
         intensity: 0.6,
         imagesRatio: 360 / 288,
-        image1: '/images/image3.png',
-        image2: '/images/olga.jpg',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/image3.png',
+        image2: import.meta.env.BASE_URL + 'images/olga.jpg',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper3.current,
         intensity: 0.4,
         imagesRatio: 360 / 320,
-        image1: '/images/image1.jpg',
-        image2: '/images/image2.jpg',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/image1.jpg',
+        image2: import.meta.env.BASE_URL + 'images/image2.jpg',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper2.current,
         intensity: 0.5,
         imagesRatio: 360 / 320,
-        image1: '/images/Ochi.png',
-        image2: '/images/eyes.png',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/Ochi.png',
+        image2: import.meta.env.BASE_URL + 'images/eyes.png',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
       new hoverEffect({
         parent: wrapper4.current,
         intensity: 0.5,
         imagesRatio: 360 / 320,
-        image1: '/images/lax.png',
-        image2: '/images/Laxer2.png',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/lax.png',
+        image2: import.meta.env.BASE_URL + 'images/Laxer2.png',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper5.current,
         intensity: 0.5,
         imagesRatio: 360 / 288,
-        image1: '/images/flow.png',
-        image2: '/images/flow2.png',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/flow.png',
+        image2: import.meta.env.BASE_URL + 'images/flow2.png',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper6.current,
         intensity: 0.5,
         imagesRatio: 360 / 320,
-        image1: '/images/last.png',
-        image2: '/images/last2.png',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/last.png',
+        image2: import.meta.env.BASE_URL + 'images/last2.png',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper7.current,
         intensity: 0.5,
         imagesRatio: 360 / 320,
-        image1: '/images/lake2.jpg',
-        image2: '/images/image.jpg',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/lake2.jpg',
+        image2: import.meta.env.BASE_URL + 'images/image.jpg',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
 
       new hoverEffect({
         parent: wrapper8.current,
         intensity: 0.5,
         imagesRatio: 360 / 320,
-        image1: '/images/image1.jpg',
-        image2: '/images/image2.jpg',
-        displacementImage: '/images/14.jpg'
+        image1: import.meta.env.BASE_URL + 'images/image1.jpg',
+        image2: import.meta.env.BASE_URL + 'images/image2.jpg',
+        displacementImage: import.meta.env.BASE_URL + 'images/14.jpg'
       })
     }
   }, []);
@@ -169,14 +169,14 @@ function Project() {
           <div
             className="aboutHeading overflow-hidden pb-[4vw] sm:pb-0 "
           >
-            <h1
+            <h2
               className="text-[9vw] leading-[10vw] tracking-tighter
                 sm:text-[6vw] font-[PlinaReg] sm:leading-[6vw] 
                 sm:tracking-normal
                 uppercase"
             >
-              our Projects
-            </h1>
+              Realizacje
+            </h2>
           </div>
           {/*Line animation */}
           <UnderLine marginBottom='4vw' marginTop='4vw' />
@@ -204,18 +204,15 @@ function Project() {
                 w-[55vw] h-[80vw]
                 sm:w-[20vw] sm:h-[25vw] relative overflow-hidden `}
           >
-            <img src='https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_1.png' alt="image1"
+            <img src={`${import.meta.env.BASE_URL}images/image3.png`} alt="image1"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
-            {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
-                  alt="image1" className="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
-                />   */}
           </div>
           <div className=' flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw]  
               sm:text-[.8vw] items-start justify-between 
               gap-8 border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5 className='whitespace-'>Logo design, Website design, Development</h5>
+            <h5 className='whitespace-'>Projekt Logo, Strony WWW, Kodowanie</h5>
             <h5>2023</h5>
           </div>
         </div>
@@ -231,7 +228,7 @@ function Project() {
             className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw]  h-[80vw]
               sm:w-[36vw] sm:h-[40vw] relative overflow-hidden `}
           >
-            <img src='https://obys.agency/wp-content/uploads/2024/02/AIM-1.png' alt="image1"
+            <img src='https://obys.agency/wp-content/uploads/2024/02/AIM-1.png' alt="Projekt AIM Logo i Strona WWW"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
             {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Olga_Prudka_2.png" 
@@ -241,7 +238,7 @@ function Project() {
           <div className='flex mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] sm:text-[.8vw] items-start justify-between 
               border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5>Logo design, Website design, Development</h5>
+            <h5>Projekt Logo, Strony WWW, Kodowanie</h5>
             <h5>2024</h5>
           </div>
         </div>
@@ -258,7 +255,7 @@ function Project() {
                 left-0 bg-[#fff] text-[#000]`}
             >
               <p className={`circleInpara ${styles.circleInpara} font-[PlinaReg] text-center text-[.9vw] scale-0 w-[70%]`}>
-                We are thrilled to have you on board. We hope you enjoy the projects 🧡
+                Cieszymy się, że tu jesteś. Zobacz nasze projekty 🧡
               </p>
             </div>
           </div>
@@ -281,7 +278,7 @@ function Project() {
                   left-0 bg-[#fff] text-[#000]`}
               >
                 <p className={`circleInpara2 ${styles.circleInpara2} text-center font-[PlinaReg] text-[.9vw] scale-0 w-[70%]`}>
-                  It will make you WOW! 😉
+                  To robi wrażenie! 😉
                 </p>
               </div>
             </div>
@@ -298,7 +295,7 @@ function Project() {
               w-[55vw] h-[80vw]
               sm:w-[36vw] sm:h-[40vw] relative overflow-hidden `}
           >
-            <img src="https://obys.agency/wp-content/uploads/2022/06/OCHI.png" alt="image1"
+            <img src="https://obys.agency/wp-content/uploads/2022/06/OCHI.png" alt="Projekt OCHI E-commerce"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
             {/* <img src="https://obys.agency/wp-content/uploads/2022/06/OCHI_2-1.png" 
@@ -309,7 +306,7 @@ function Project() {
               sm:text-[.8vw] items-start justify-between 
               gap-8 border-b-[1px] border-white  pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5 className=''>Website design, Development</h5>
+            <h5 className=''>Strony WWW, Kodowanie</h5>
             <h5>2022</h5>
           </div>
         </div>
@@ -328,7 +325,7 @@ function Project() {
             className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw] h-[80vw]
                 sm:w-[30vw] sm:h-[38vw] relative overflow-hidden `}
           >
-            <img src="https://obys.agency/wp-content/uploads/2023/08/Laxer_1-2.png" alt="image1"
+            <img src="https://obys.agency/wp-content/uploads/2023/08/Laxer_1-2.png" alt="Projekt David Laxer Portfolio"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
             {/* <img src="https://obys.agency/wp-content/uploads/2023/08/Laxer_2.png" 
@@ -339,7 +336,7 @@ function Project() {
                 sm:text-[.8vw] items-start justify-between 
                 border-b-[1px] border-white  pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5>Website design, Development</h5>
+            <h5>Strony WWW, Kodowanie</h5>
             <h5>2023</h5>
           </div>
         </div>
@@ -360,7 +357,7 @@ function Project() {
             className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw] h-[80vw]
               sm:w-[20vw] sm:h-[25vw] relative overflow-hidden `}
           >
-            <img src="https://obys.agency/wp-content/uploads/2023/11/%C3%89minente_First.png" alt="image1"
+            <img src="https://obys.agency/wp-content/uploads/2023/11/%C3%89minente_First.png" alt="Projekt Eminente Branding"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
             {/* <img src="https://obys.agency/wp-content/uploads/2023/11/%C3%89minente-_img1-x2.png" 
@@ -371,7 +368,7 @@ function Project() {
               sm:text-[.8vw] items-start justify-between 
               gap-8 border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5 className=''>Logo design, Website design, Development</h5>
+            <h5 className=''>Projekt Logo, Strony WWW, Kodowanie</h5>
             <h5>2023</h5>
           </div>
         </div>
@@ -389,7 +386,7 @@ function Project() {
                   left-0 bg-[#fff] text-[#000]`}
               >
                 <p className={`circleInpara3 ${styles.circleInpara3} text-center font-[PlinaReg] text-[.9vw] scale-0 w-[70%]`}>
-                  We like its color palette 🎨
+                  Lubimy te kolory 🎨
                 </p>
               </div>
             </div>
@@ -405,7 +402,7 @@ function Project() {
             className={`imageContainer ${styles.imageContainer} sm:ml-0 realtive w-[55vw] h-[80vw]
                 sm:w-[30vw] sm:h-[38vw] relative overflow-hidden `}
           >
-            <img src="https://obys.agency/wp-content/uploads/2023/12/Makhno_First.png" alt="image1"
+            <img src="https://obys.agency/wp-content/uploads/2023/12/Makhno_First.png" alt="Projekt Makhno Studio"
               className="inline-block sm:hidden w-full h-full object-cover"
             />
             {/* <img src="https://obys.agency/wp-content/uploads/2023/12/Makhno_Hover.png" 
@@ -415,7 +412,7 @@ function Project() {
           <div className='flex  mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] sm:text-[.8vw] items-start justify-between 
                 border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
           >
-            <h5>Website design, Development</h5>
+            <h5>Strony WWW, Kodowanie</h5>
             <h5>2023</h5>
           </div>
         </div>
@@ -434,7 +431,7 @@ function Project() {
               className={`imageContainer ${styles.imageContainer} sm:ml-0 w-[55vw] h-[80vw]
               sm:w-[20vw] sm:h-[25vw] relative overflow-hidden `}
             >
-              <img src="/images/lake2.jpg" alt="image1"
+              <img src={`${import.meta.env.BASE_URL}images/lake2.jpg`} alt="Projekt Zentry 3D Web"
                 className="inline-block sm:hidden w-full h-full object-cover"
               />
             </div>
@@ -442,7 +439,7 @@ function Project() {
               sm:text-[.8vw] items-start justify-between 
               gap-8 border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
             >
-              <h5 className=''>Website design, Development, 3D</h5>
+              <h5 className=''>Strony WWW, Kodowanie, 3D</h5>
               <h5>2024</h5>
             </div>
           </div>
@@ -459,14 +456,14 @@ function Project() {
               className={`imageContainer ${styles.imageContainer} sm:ml-0 realtive w-[55vw] h-[80vw]
                 sm:w-[30vw] sm:h-[38vw] relative overflow-hidden `}
             >
-              <img src="/images/image1.jpg" alt="image1"
+              <img src={`${import.meta.env.BASE_URL}images/image1.jpg`} alt="Projekt RIZON Branding"
                 className="inline-block sm:hidden w-full h-full object-cover"
               />
             </div>
             <div className='flex  mt-[7vw] sm:mt-[1.6vw] font-[PlinaReg] text-[3vw] sm:text-[.8vw] items-start justify-between 
                 border-b-[1px] border-white pb-[6vw] sm:pb-[1.6vw]'
             >
-              <h5>Branding, Web Design</h5>
+              <h5>Branding, Strony WWW</h5>
               <h5>2024</h5>
             </div>
           </div>
